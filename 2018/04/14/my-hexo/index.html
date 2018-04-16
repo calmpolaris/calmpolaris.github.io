@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="轻语之屋">
 <meta property="og:description" content="Git下载经过了长达半个月的学习时期，我终于将博客部署在了我的github上，在这里作为第一篇博客，记录下自己的心酸历程首先是Git 在git页面选择自己的系统对应的版本，下载并安装，安装默认一遍过就行Git链接远程仓库1.在你电脑上的某一个你准备存放github项目的位置打开git bash（推荐在空目录下，将根目录作为git的目录会造成git将所有文件当做未上传文件[emmmm]），输入git">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-04-15T14:18:34.638Z">
+<meta property="og:updated_time" content="2018-04-15T14:29:10.425Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="My Hexo">
 <meta name="twitter:description" content="Git下载经过了长达半个月的学习时期，我终于将博客部署在了我的github上，在这里作为第一篇博客，记录下自己的心酸历程首先是Git 在git页面选择自己的系统对应的版本，下载并安装，安装默认一遍过就行Git链接远程仓库1.在你电脑上的某一个你准备存放github项目的位置打开git bash（推荐在空目录下，将根目录作为git的目录会造成git将所有文件当做未上传文件[emmmm]），输入git">
@@ -168,10 +168,13 @@
       
         <h3 id="Git下载"><a href="#Git下载" class="headerlink" title="Git下载"></a>Git下载</h3><p>经过了长达半个月的学习时期，我终于将博客部署在了我的github上，在这里作为第一篇博客，记录下自己的心酸历程<br>首先是<a href="https://git-scm.com/downloads" target="_blank" rel="noopener">Git</a></p>
 <h2 id="在git页面选择自己的系统对应的版本，下载并安装，安装默认一遍过就行"><a href="#在git页面选择自己的系统对应的版本，下载并安装，安装默认一遍过就行" class="headerlink" title="在git页面选择自己的系统对应的版本，下载并安装，安装默认一遍过就行"></a>在git页面选择自己的系统对应的版本，下载并安装，安装默认一遍过就行</h2><h3 id="Git链接远程仓库"><a href="#Git链接远程仓库" class="headerlink" title="Git链接远程仓库"></a>Git链接远程仓库</h3><p>1.在你电脑上的某一个你准备存放github项目的位置打开git bash（推荐在空目录下，将根目录作为git的目录会造成git将所有文件当做未上传文件[emmmm]），输入<code>git init</code>进行初始化，git会自动在当前目录建立隐藏配置文件夹.git</p>
-<p>2.在用户主目录（C:\Users\Administrator）下，看看有没有.ssh文件，如果有，再看文件下有没有id_rsa和id_rsa.pub这两个文件，如果已经有了，可直接到下一步。如果没有，打开Git Bash，输入命令，创建SSH Key<br><figure class="highlight plain"><figcaption><span>ssh-keygen -t rsa -C "yourname@github.com"</span><a href="//yourname是你自己注册GitHub的邮箱```">link</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">输入这条命令之后进入C盘的用户目录，有一个.ssh文件夹，其中有id_rsa和id_rsa.pub两个文件，这两个就是SSH Key的秘钥对，id_rsa是私钥，不能泄露，id_rsa.pub是公钥，可以公开。</span><br><span class="line"></span><br><span class="line">3.在github的个人配置选项setting中有SSH and GPG keys选项，在其中选择添加SSH密钥，title可以自己命名，下面key输入框只要将用户目录下rsa.pub文件中的所有字符复制粘贴到其中，添加SSH密钥就算完成了。</span><br><span class="line"></span><br><span class="line">4.测试ssh密钥是否添加成功的方法便是在任意目录下打开git bash，输入</span><br><span class="line">```$ ssh -T git@github.com</span><br></pre></td></tr></table></figure></p>
-<p>如果出现<br><figure class="highlight plain"><figcaption><span>yourname! You've successfully authenticated, but GitHub does not provide shell access.```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">那么就是SSH绑定成功了</span><br><span class="line"></span><br><span class="line">5.接下来就是在Git中保存github的账号密码</span><br></pre></td></tr></table></figure></p>
-<p>$ git config –global user.name  “name”//你的GitHub登陆名<br>$ git config –global user.email “<a href="mailto:123@126.com" target="_blank" rel="noopener">123@126.com</a>“//你的GitHub注册邮箱<br> <code>`</code></p>
-
+<p>2.在用户主目录（C:\Users\Administrator）下，看看有没有.ssh文件，如果有，再看文件下有没有id_rsa和id_rsa.pub这两个文件，如果已经有了，可直接到下一步。如果没有，打开Git Bash，输入命令，创建SSH Key</p>
+<figure class="highlight plain"><figcaption><span>ssh-keygen -t rsa -C "yourname@github.com"</span><a href="//yourname是你自己注册GitHub的邮箱">``` </a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">输入这条命令之后进入C盘的用户目录，有一个.ssh文件夹，其中有id_rsa和id_rsa.pub两个文件，这两个就是SSH Key的秘钥对，id_rsa是私钥，不能泄露，id_rsa.pub是公钥，可以公开。</span><br><span class="line"></span><br><span class="line">3.在github的个人配置选项setting中有SSH and GPG keys选项，在其中选择添加SSH密钥，title可以自己命名，下面key输入框只要将用户目录下rsa.pub文件中的所有字符复制粘贴到其中，添加SSH密钥就算完成了。</span><br><span class="line"></span><br><span class="line">4.测试ssh密钥是否添加成功的方法便是在任意目录下打开git bash，输入</span><br><span class="line"></span><br><span class="line"> ``` $ ssh -T git@github.com``` </span><br><span class="line">如果出现</span><br><span class="line"></span><br><span class="line"> ``` Hi yourname! You&apos;ve successfully authenticated, but GitHub does not provide shell access.</span><br></pre></td></tr></table></figure>
+<p>那么就是SSH绑定成功了</p>
+<p>5.接下来就是在Git中保存github的账号密码</p>
+<pre><code>$ git config --global user.name  &quot;name&quot;//你的GitHub登陆名  
+$ git config --global user.email &quot;123@126.com&quot;//你的GitHub注册邮箱
+</code></pre>
       
 
       
@@ -262,6 +265,20 @@
 </article>
 
   
+<nav id="article-nav">
+  
+    <a href="/2018/04/15/test/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          test
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
