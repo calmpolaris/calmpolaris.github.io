@@ -72,10 +72,6 @@
     			
             
     			
-    			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">友链</a>
-    			
-            
-    			
     			<a q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">关于我</a>
     			
             
@@ -194,10 +190,15 @@ $ git config --<span class="keyword">global</span> user.email <span class="strin
                   <div class="reward-box">
                     
                     <div class="reward-box-item">
-                      <img class="reward-img" src="assets/img/Alipay.jpg">
+                      <img class="reward-img" src="/assets/img/Alipay.jpg">
                       <span class="reward-type">支付宝</span>
                     </div>
                     
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/WeChat.png">
+                      <span class="reward-type">微信</span>
+                    </div>
                     
                   </div>
                 </span>
@@ -273,20 +274,6 @@ $ git config --<span class="keyword">global</span> user.email <span class="strin
 </article>
 
   
-<nav id="article-nav">
-  
-    <a href="/2018/04/16/test/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          test
-        
-      </div>
-    </a>
-  
-  
-</nav>
-
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -300,6 +287,19 @@ $ git config --<span class="keyword">global</span> user.email <span class="strin
             </div>
         </div>
         
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Git下载"><span class="toc-number">1.</span> <span class="toc-text">Git下载</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#在git页面选择自己的系统对应的版本，下载并安装，安装默认一遍过就行"><span class="toc-number"></span> <span class="toc-text">在git页面选择自己的系统对应的版本，下载并安装，安装默认一遍过就行</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Git链接远程仓库"><span class="toc-number">1.</span> <span class="toc-text">Git链接远程仓库</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
         
     </div>
 </aside>
@@ -368,25 +368,17 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
       
       
     
-      
-      
-      
-    
     
 
     <ul style="width: 70%">
     
     
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
+      <li style="width: 50%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
       
         
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'friends')"><a href="javascript:void(0)" q-class="active:friends">友链</a></li>
-      
-        
-      
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
+      <li style="width: 50%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
       
         
     </ul>
@@ -405,6 +397,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">test</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
@@ -449,10 +445,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     	</section>
     
 
-    
-    	<section class="tools-section tools-section-friends" q-show="friends">
-  		
-    	</section>
     
 
     
