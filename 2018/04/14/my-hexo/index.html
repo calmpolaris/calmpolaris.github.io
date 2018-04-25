@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="经过了长达半个月的学习时期，我终于将博客部署在了我的github上，在这里作为第一篇博客，记录下自己的心酸历程 Git下载在Git页面选择自己的系统对应的版本，下载并安装，安装默认一遍过就行 Git链接远程仓库1.在你电脑上的某一个你准备存放github项目的位置打开git bash（推荐在空目录下，将根目录作为git的目录会造成git将所有文件当做未上传文件[emmmm]），输入git init">
+<meta name="description" content="经过了长达半个月的学习时期，我终于将博客部署在了我的github上，在这里作为第一篇博客，记录下自己的心酸历程 环境搭建github只支持静态博客，当前较为成熟的解决方案为jekyll和hexo，最初我选择了jekyll……在经历多次本地服务启动失败后，我选择了hexo作为博客解决方案。hexo运行环境需要node.js，上传方法使用Git hexo本地服务安装node在安装之后可以win+R打开">
 <meta property="og:type" content="article">
 <meta property="og:title" content="My Hexo">
 <meta property="og:url" content="https://calmpolaris.github.io/2018/04/14/my-hexo/index.html">
 <meta property="og:site_name" content="轻语之屋">
-<meta property="og:description" content="经过了长达半个月的学习时期，我终于将博客部署在了我的github上，在这里作为第一篇博客，记录下自己的心酸历程 Git下载在Git页面选择自己的系统对应的版本，下载并安装，安装默认一遍过就行 Git链接远程仓库1.在你电脑上的某一个你准备存放github项目的位置打开git bash（推荐在空目录下，将根目录作为git的目录会造成git将所有文件当做未上传文件[emmmm]），输入git init">
+<meta property="og:description" content="经过了长达半个月的学习时期，我终于将博客部署在了我的github上，在这里作为第一篇博客，记录下自己的心酸历程 环境搭建github只支持静态博客，当前较为成熟的解决方案为jekyll和hexo，最初我选择了jekyll……在经历多次本地服务启动失败后，我选择了hexo作为博客解决方案。hexo运行环境需要node.js，上传方法使用Git hexo本地服务安装node在安装之后可以win+R打开">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-04-22T08:15:56.136Z">
+<meta property="og:updated_time" content="2018-04-25T10:06:01.066Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="My Hexo">
-<meta name="twitter:description" content="经过了长达半个月的学习时期，我终于将博客部署在了我的github上，在这里作为第一篇博客，记录下自己的心酸历程 Git下载在Git页面选择自己的系统对应的版本，下载并安装，安装默认一遍过就行 Git链接远程仓库1.在你电脑上的某一个你准备存放github项目的位置打开git bash（推荐在空目录下，将根目录作为git的目录会造成git将所有文件当做未上传文件[emmmm]），输入git init">
+<meta name="twitter:description" content="经过了长达半个月的学习时期，我终于将博客部署在了我的github上，在这里作为第一篇博客，记录下自己的心酸历程 环境搭建github只支持静态博客，当前较为成熟的解决方案为jekyll和hexo，最初我选择了jekyll……在经历多次本地服务启动失败后，我选择了hexo作为博客解决方案。hexo运行环境需要node.js，上传方法使用Git hexo本地服务安装node在安装之后可以win+R打开">
 
 
 
@@ -314,8 +314,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Building/" itemprop="url" rel="index">
-                    <span itemprop="name">Building</span>
+                  <a href="/categories/hexo/" itemprop="url" rel="index">
+                    <span itemprop="name">hexo</span>
                   </a>
                 </span>
 
@@ -362,16 +362,14 @@
 
       
         <p>经过了长达半个月的学习时期，我终于将博客部署在了我的github上，在这里作为第一篇博客，记录下自己的心酸历程</p>
-<h1 id="Git下载"><a href="#Git下载" class="headerlink" title="Git下载"></a>Git下载</h1><p>在<a href="https://git-scm.com/downloads" target="_blank" rel="noopener">Git</a>页面选择自己的系统对应的版本，下载并安装，安装默认一遍过就行</p>
-<h1 id="Git链接远程仓库"><a href="#Git链接远程仓库" class="headerlink" title="Git链接远程仓库"></a>Git链接远程仓库</h1><p>1.在你电脑上的某一个你准备存放github项目的位置打开git bash（推荐在空目录下，将根目录作为git的目录会造成git将所有文件当做未上传文件[emmmm]），输入<code>git init</code>进行初始化，git会自动在当前目录建立隐藏配置文件夹.git<br>2.在用户主目录（C:\Users\Administrator）下，看看有没有.ssh文件，如果有，再看文件下有没有id_rsa和id_rsa.pub这两个文件，如果已经有了，可直接到下一步。如果没有，打开Git Bash，输入命令，创建SSH Key<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C <span class="string">"yourname@github.com"</span>   <span class="comment">//yourname是你自己注册GitHub的邮箱</span></span><br></pre></td></tr></table></figure></p>
-<p>输入这条命令之后进入C盘的用户目录，有一个.ssh文件夹，其中有id_rsa和id_rsa.pub两个文件，这两个就是SSH Key的秘钥对，id_rsa是私钥，不能泄露，id_rsa.pub是公钥，可以公开。</p>
-<p>3.在github的个人配置选项setting中有SSH and GPG keys选项，在其中选择添加SSH密钥，title可以自己命名，下面key输入框只要将用户目录下rsa.pub文件中的所有字符复制粘贴到其中，添加SSH密钥就算完成了。</p>
-<p>4.测试ssh密钥是否添加成功的方法便是在任意目录下打开git bash，输入<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh -T git@github.com</span><br></pre></td></tr></table></figure></p>
-<p>如果出现<br> <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Hi yourname! You<span class="string">'ve successfully authenticated, but GitHub does not provide shell access.</span></span><br></pre></td></tr></table></figure></p>
-<p>那么就是SSH绑定成功了</p>
-<pre><code class="python">$ git config --<span class="keyword">global</span> user.name  <span class="string">"name"</span>//你的GitHub登陆名  
-$ git config --<span class="keyword">global</span> user.email <span class="string">"123@github.com"</span>//你的GitHub注册邮箱
-</code></pre>
+<h1 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h1><p>github只支持静态博客，当前较为成熟的解决方案为jekyll和hexo，最初我选择了jekyll……在经历多次本地服务启动失败后，我选择了hexo作为博客解决方案。<br>hexo运行环境需要node.js，上传方法使用Git</p>
+<h2 id="hexo本地服务安装"><a href="#hexo本地服务安装" class="headerlink" title="hexo本地服务安装"></a>hexo本地服务安装</h2><p>node在安装之后可以win+R打开运行框输入node -v和npm -v来检测是否安装成功<br>在资源管理器内选择自己喜欢的地方，我选择的是F盘，cmd下输入npm install hexo -g安装hexo<br>输入hexo init初始化该文件夹，成功就会出现“Start blogging with Hexo！”，输入npm install安装所需的组件<br>输入hexo g，使用hexo引擎将网页静态化<br>输入hexo s，启动hexo<br>至此，hexo本地服务就搭建完成了，可以使用127.0.0.1:4000来访问</p>
+<h2 id="链接远程库"><a href="#链接远程库" class="headerlink" title="链接远程库"></a>链接远程库</h2><p>Git安装之后只要在资源管理器任意空白处点右键，有git Bash和git GUI出现，就证明安装成功了<br><a href="www.github.com">github</a>创建自己的账户并且创建自己的账户名+github.io（注：其他仓库名会无法显示）</p>
+<h3 id="配置Git个人信息"><a href="#配置Git个人信息" class="headerlink" title="配置Git个人信息"></a>配置Git个人信息</h3><p>1.设置Git的user name和email：(如果是第一次的话)<br>打开git Bash 输入<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --<span class="keyword">global</span> user.name <span class="string">"xujun"</span></span><br><span class="line">git config --<span class="keyword">global</span> user.email <span class="string">"yourname@github.com"</span></span><br></pre></td></tr></table></figure></p>
+<p>2.生成密钥<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">"yourname@github.com"</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="配置Deployment"><a href="#配置Deployment" class="headerlink" title="配置Deployment"></a>配置Deployment</h3><p>在hexo根目录下找到_config.yml，找到Deployment，按照如下修改<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@github.com:yourname/yourname.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure></p>
+<p>在C盘的用户目录文件下找到.ssh目录，里面有id_rsa.pub文件，将里面的全部复制到github上添加SSH密钥就可以了。</p>
+<p>至此，配置完毕，你可以使用hexo d来部署你的博客，博客网址为yourname.github.io<br>之后就是愉快的博客建设之旅了</p>
 
       
     </div>
@@ -479,21 +477,12 @@ $ git config --<span class="keyword">global</span> user.email <span class="strin
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
             
 
-            
-              
-              
-              <div class="site-state-item site-state-tags">
-                <a href="/tags/index.html">
-                  <span class="site-state-item-count">1</span>
-                  <span class="site-state-item-name">标签</span>
-                </a>
-              </div>
             
 
           </nav>
@@ -523,7 +512,7 @@ $ git config --<span class="keyword">global</span> user.email <span class="strin
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Git下载"><span class="nav-number">1.</span> <span class="nav-text">Git下载</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Git链接远程仓库"><span class="nav-number">2.</span> <span class="nav-text">Git链接远程仓库</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#环境搭建"><span class="nav-number">1.</span> <span class="nav-text">环境搭建</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#hexo本地服务安装"><span class="nav-number">1.1.</span> <span class="nav-text">hexo本地服务安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#链接远程库"><span class="nav-number">1.2.</span> <span class="nav-text">链接远程库</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#配置Git个人信息"><span class="nav-number">1.2.1.</span> <span class="nav-text">配置Git个人信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置Deployment"><span class="nav-number">1.2.2.</span> <span class="nav-text">配置Deployment</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
